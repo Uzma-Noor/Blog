@@ -1,0 +1,14 @@
+<%- include('partials/header') -%>
+
+<h1><%= selectedPostTitle%></h1>
+
+<p> <%= selectedPostContent%> </p>
+<div style = "display: flex;">
+    <form action="/compose" method="post">
+      <button type="submit" name="postId" class="btn btn-success" value="<%= selectedPostId %>">Edit</button>
+    </form>
+    <form method="post" action="/delete">
+        <button type="submit" name="postId" value="<%= selectedPostId %>" class="btn btn-danger">Delete</button>
+    </form>
+</div>
+<%- include('partials/footer') -%>

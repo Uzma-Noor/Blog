@@ -1,0 +1,18 @@
+<%- include('partials/header') -%>
+
+<h1>Contact</h1>
+
+<p> <%= contactContent%> </p>
+   <form class="" action="mailto:uzma@abc.com" method="post" enctype="text/plain">
+     <label>Your Name:</label>
+     <input type="text" name="yourname" value="">
+     <br></br>
+     <label>Your Email 📩 : </label>
+     <input type="email" name="youremail">
+     <br></br>
+     <label>Write Your Message 📧 : </label><br></br>
+     <textarea name="yourmessage" rows="10" cols="30"></textarea>
+     <br></br>
+     <input type="submit" name="" value="📝Drop a note" style="border-radius:20px">
+   </form>
+<%- include('partials/footer') -%>

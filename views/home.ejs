@@ -1,0 +1,22 @@
+<%- include('partials/header') -%>
+
+<h1>Quick Intro</h1>
+<p>  <%= startingContent%> </p>
+<ul>
+    <li>You could write down your goals</li>
+    <li>Or things you are greatful for</li>
+    <li>Awareness you would like to spread</li>
+    <li>WHAT’S THE BEST THING THAT HAPPENED TODAY?</li>
+    <li>And what not ........ </li>
+    <li>Go ahead give it a read or jot things down</li>
+    <li>We love you and are here to help each other and lift each other up.</li>
+</ul>
+  <% posts.forEach(function(post){ %>
+    <hr>
+    <h1><%= post.title %></h1>
+    <p> <%= post.content.substr(0,100) + "..." %>
+      <a href="/posts/<%=post._id%>">Read More</a>
+    </p>
+    <input type="hidden" name="postId" value= "<%= post._id %>"></input>
+<% }) %>
+<%- include('partials/footer') -%>
