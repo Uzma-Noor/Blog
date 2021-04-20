@@ -47,12 +47,10 @@ app.get("/compose", function(req, res){
 });
 
 app.post("/compose", function(req, res){
-  console.log(req.body);
   const postId = req.body.postId;
   const existingContentId = req.body.publish;
   if(postId){
     //open existing edit content of post in compose mode
-    console.log("In first condition");
     BlogContent.findOne({_id: postId}, function(err, post){
       console.log(post);
       if(!err){
@@ -61,7 +59,6 @@ app.post("/compose", function(req, res){
     })
   }else if (existingContentId) {
     //If clicked on publish with existing content update the existing record
-    console.log("In second condition");
     const title = req.body.postTitle;
     const content = req.body.postContent;
     BlogContent.updateOne({_id: existingContentId}, {title : req.body.postTitle, content : req.body.postBody}, function(err, post){
@@ -71,7 +68,6 @@ app.post("/compose", function(req, res){
         }
     });
   }else{
-    console.log("In third condition");
     //If gone through compose mode in tool bar create a fresh content.
     const content = new BlogContent({
       title : req.body.postTitle,
