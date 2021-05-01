@@ -5,22 +5,32 @@
   <meta charset="utf-8">
   <title>Blog To Cheer</title>
   <meta charset="utf-8">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+  <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-social/5.1.1/bootstrap-social.css" integrity="sha512-sopmFEmRVsWt542K+yzH3FQ1KJfdosOJG+bGLs9ZJT07b/3gUxRA9ICuJg2JtoZ9WeknAUuwJ0ggnmrV1YL6kQ==" crossorigin="anonymous" />
   <link rel="stylesheet" href="/css/styles.css">
-  <nav class="navbar navbar-default">
-    <div class="container">
+
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
       <div class="navbar-header">
-        <p class="navbar-brand">BLOG</p>
+        <a class="navbar-brand" href="#">BLOG</a>
       </div>
         <ul class="nav navbar-nav navbar-right">
-          <!-- 6 -->
-          <li id="home"><a href="/">HOME</a></li>
-          <li id="home"><a href="/compose">COMPOSE</a></li>
-          <li id="about"><a href="/about">ABOUT US</a></li>
-          <li id="contact"><a href="/contact">CONTACT US</a></li>
+          <li class="nav-item active" id="home"><a class="nav-link" href="/">HOME</a></li>
+          <li class="nav-item" id="compose"><a class="nav-link" href="/compose">COMPOSE</a></li>
+          <li class="nav-item" id="about"><a class="nav-link" href="/about">ABOUT</a></li>
+          <li class="nav-item" id="contact"><a class="nav-link" href="/contact">CONTACT US</a></li>
+          <% if(!authenticated){ %>
+            <li class="nav-item" id="register"><a class="nav-link" href="/register">REGISTER</a></li>
+            <li class="nav-item" id="login"><a class="nav-link" href="/login">LOGIN</a></li>
+          <% } %>
+          <% if(authenticated){ %>
+            <li class="nav-item" id="logout"><a class="nav-link" href="/logout">LOG OUT</a></li>
+          <% } %>
         </ul>
     </div>
   </nav>
 
-  <body>
-    <div class="container">
+<body>
+  <div class="container">

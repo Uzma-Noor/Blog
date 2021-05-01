@@ -1,18 +1,31 @@
 .container-fluid {
-    padding-top: 70px;
-    padding-bottom: 70px;
+  padding: 0 50px 0;
 }
+
 .navbar {
-    padding-top: 15px;
-    padding-bottom: 15px;
+    padding-top: 30px;
+    padding-bottom: 30px;
     border: 0;
     border-radius: 0;
-    margin-bottom: 0;
-    font-size: 12px;
+    margin-bottom: 25px;
+    font-size: 14px;
     letter-spacing: 5px;
 }
+
+.navbar-nav  li{
+  margin: 0 10px 0;
+}
+
 .navbar-nav  li a:hover {
     color: #1abc9c !important;
+}
+
+a{
+  color: #1abc9c;
+}
+
+a:hover {
+    color: #24967f;
 }
 
 h1{
